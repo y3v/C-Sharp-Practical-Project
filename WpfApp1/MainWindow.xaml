@@ -1,0 +1,111 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="900" Background="CornflowerBlue" Loaded="Window_Loaded" Name="Schedule" WindowStartupLocation="Manual"  Left="10" Top="10" >
+    <Grid>
+        <DockPanel>
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_File" >
+                    <MenuItem Header="_Add Appointment" Click="MenuItem_Click"/>
+                    <MenuItem Header="_Change User"/>
+                    <MenuItem Header="_Exit"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+        <StackPanel>
+            <Grid HorizontalAlignment="Center" Margin="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Name="txtTitle" TextWrapping="Wrap" Text="Schedule for " VerticalAlignment="Top" Margin="0,15,0,0" FontSize="20"/>
+                <TextBlock Name="txtDate" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,15,0,0" Grid.Column="1" FontSize="20"/>
+            </Grid>
+            <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="2" Height="2" Margin="0,5,-58,0" VerticalAlignment="Top"/>
+            <Grid Width="700" Margin="100,-50,0,-100" Height="35">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Name="lblCallBacks" Content="Callbacks" FontWeight="DemiBold" HorizontalAlignment="Center" FontSize="20"/>
+                <Label Name="lblOlivier" Content="Olivier" FontWeight="DemiBold" HorizontalAlignment="Center" FontSize="20" Grid.Column="1"/>
+                <Label Name="lblYev" Content="Yev" FontWeight="DemiBold" HorizontalAlignment="Center" FontSize="20" Grid.Column="2"/>
+            </Grid>
+            <Grid HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="700"/>
+                </Grid.ColumnDefinitions>
+                <Grid Name="grdSchedule" Height="500" Width="700" Margin="0,50,0,25" Background="LightSkyBlue" ShowGridLines="True" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <!--define rows for time blocks-->
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <Grid Grid.Column="0" Height="500" Margin="0,45,0,25" Name="grdLabels">
+                    <Grid.RowDefinitions>
+                        <!--define rows for the time stamps-->
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Label Name="lbl1" Grid.Row="0" Content="9:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl2" Grid.Row="1" Content="9:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl3" Grid.Row="2" Content="10:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl4" Grid.Row="3" Content="10:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl5" Grid.Row="4" Content="11:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl6" Grid.Row="5" Content="11:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl7" Grid.Row="6" Content="12:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl8" Grid.Row="7" Content="12:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl9" Grid.Row="8" Content="1:00"  HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl10" Grid.Row="9" Content="1:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl11" Grid.Row="10" Content="2:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl12" Grid.Row="11" Content="2:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl13" Grid.Row="12" Content="3:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl14" Grid.Row="13" Content="3:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl15" Grid.Row="14" Content="4:00" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                    <Label Name="lbl16" Grid.Row="15" Content="4:30" HorizontalAlignment="Right" FontSize="20" Margin="0,0,20,0" />
+                </Grid>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>

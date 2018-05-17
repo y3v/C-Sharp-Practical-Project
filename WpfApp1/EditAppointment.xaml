@@ -1,0 +1,76 @@
+﻿<Window x:Class="WpfApp1.EditAppointment"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Edit Appointment" Height="420" Width="600">
+    <Grid>
+        <StackPanel Margin="50,10,50,0">
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label Content="Appointment Info" Margin="8" />
+                </GroupBox.Header>
+                <Grid Height="240">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Label Name="lblName2" Content="First Name"  Margin="8"/>
+                    <TextBox Name="txtName2" Background="AliceBlue" Grid.Column="1" Margin="8" />
+                    <Label Name="lblSurname2" Content="Last Name"  Margin="8" Grid.Row="1"/>
+                    <TextBox Name="txtSurname2" Background="AliceBlue" Grid.Column="1" Grid.Row="1" Margin="8" />
+                    <Label Name="lblTime2" Content="Time"  Margin="8" Grid.Row="2"/>
+                    <ComboBox Name="timeSelect2" Grid.Column="1" Grid.Row="2" IsEditable="True" IsReadOnly="True" Text="                              -- Select Time --" Margin="10" >
+                        <ComboBoxItem Name="Item1">9:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item2">9:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item3">10:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item4">10:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item5">11:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item6">11:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item7">12:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item8">12:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item9">1:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item10">1:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item11">2:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item12">2:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item13">3:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item14">3:30</ComboBoxItem>
+                        <ComboBoxItem Name="Item15">4:00</ComboBoxItem>
+                        <ComboBoxItem Name="Item16">4:30</ComboBoxItem>
+                    </ComboBox>
+                    <Label Name="lblProvider2" Content="With:" Grid.Row="3" Margin="8"/>
+                    <Grid Grid.Column="1" Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Name="radioOlivier2" Content="Olivier" FontSize="15" Margin="15" />
+                        <RadioButton Name="radioYev2" Content="Yev" FontSize="15" Margin="15" Grid.Column="1" />
+                        <RadioButton Name="radioCallback2" Content="Callback" FontSize="15" Margin="15" Grid.Column="2" />
+                    </Grid>
+                    <Label Grid.Row="4" Content="Duration" Margin="8" />
+                    <Grid Grid.Column="1" Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Name="radioHalfHour2" Content="30 min" FontSize="15" Margin="15" />
+                        <RadioButton Name="radioHour2" Content="60 min" FontSize="15" Margin="15" Grid.Column="1" />
+                    </Grid>
+                </Grid>
+            </GroupBox>
+            <Button Name="btnEdit" Content="Edit Appointment" Width="200" Margin="0,10,0,0" Click="btnEdit_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
